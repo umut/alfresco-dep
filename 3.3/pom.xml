@@ -11,12 +11,6 @@
 
     <name>Alfresco Dependencies</name>
 
-    <scm>
-        <connection>scm:svn:https://razorfish.jira.com/svn/SNY/WCMS/trunk</connection>
-        <developerConnection>scm:svn:https://razorfish.jira.com/svn/SNY/WCMS/trunk</developerConnection>
-        <url>https://razorfish.jira.com/svn/SNY/WCMS/trunk</url>
-    </scm>
-
     <repositories>
 	<repository>
             <id>snapshot.extensions.springframework.org</id>
