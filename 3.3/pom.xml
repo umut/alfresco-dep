@@ -1,0 +1,2304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.alfresco.sdk</groupId>
+    <artifactId>alfresco-dep</artifactId>
+    <packaging>jar</packaging>
+    <version>3.3</version>
+
+    <name>Alfresco Dependencies</name>
+
+    <scm>
+        <connection>scm:svn:https://razorfish.jira.com/svn/SNY/WCMS/trunk</connection>
+        <developerConnection>scm:svn:https://razorfish.jira.com/svn/SNY/WCMS/trunk</developerConnection>
+        <url>https://razorfish.jira.com/svn/SNY/WCMS/trunk</url>
+    </scm>
+
+    <repositories>
+	<repository>
+            <id>snapshot.extensions.springframework.org</id>
+            <url>http://extensions.springframework.org/snapshot/</url>
+        </repository>
+        <repository>
+            <id>apache.snapshots.repository</id>
+            <name>Apache Snapshots Repository</name>
+            <url>http://repository.apache.org/snapshots</url>
+        </repository>
+        <repository>
+            <id>jboss.repository</id>
+            <name>JBoss Repository</name>
+            <url>http://repository.jboss.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>amazon.alfresco.sdk</id>
+            <name>Amazon Alfresco SDK</name>
+            <url>http://ec2-50-16-105-55.compute-1.amazonaws.com/nexus/content/repositories/alfresco.sdk/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>abdera-client-0.4.0-incubating</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.abdera</groupId>
+            <artifactId>abdera-client</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>abdera-core-0.4.0-incubating</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.abdera</groupId>
+            <artifactId>abdera-core</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>abdera-extensions-json-0.4.0-incubating</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.abdera</groupId>
+            <artifactId>abdera-extensions-json</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>abdera-i18n-0.4.0-incubating</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.abdera</groupId>
+            <artifactId>abdera-i18n</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>abdera-parser-0.4.0-incubating</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.abdera</groupId>
+            <artifactId>abdera-parser</artifactId>
+            <version>1.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.codehaus.woodstox</groupId>
+                    <artifactId>wstx-asl</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>acegi-security-0.8.2_patched</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>activation</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>addressing-1.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+
+        <dependency>
+            <groupId>net.sourceforge.addressing</groupId>
+            <artifactId>addressing</artifactId>
+            <version>1.1</version>
+            <!-- 1.0 -->
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>alfresco-core-3.3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>alfresco-deployment-3.3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>alfresco-jlan-embed-3.3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>alfresco-linkvalidation</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>alfresco-mbeans-3.3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>alfresco-remote-api-3.3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>alfresco-repository-3.3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>alfresco-wdr-deployment</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>alfresco-web-client-3.3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>alfresco-web-framework-commons-3.3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>ant-1.7.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.7.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>antlr-3.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr</artifactId>
+            <version>3.2</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>aopalliance</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>aopalliance</groupId>
+            <artifactId>aopalliance</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>avalon-framework-4.2.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>avalon-framework</groupId>
+            <artifactId>avalon-framework-impl</artifactId>
+            <version>4.2.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>axiom-api-1.2.5</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.ws.commons.axiom</groupId>
+            <artifactId>axiom-api</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>axiom-impl-1.2.5</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.ws.commons.axiom</groupId>
+            <artifactId>axiom-impl</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>axis-1.4</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.axis</groupId>
+            <artifactId>axis</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>batik-all-1.6</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>bcel</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>bcel</groupId>
+            <artifactId>bcel</artifactId>
+            <version>5.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>bcmail-jdk15-137</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>bouncycastle</groupId>
+            <artifactId>bcmail-jdk15</artifactId>
+            <version>140</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>bcprov-jdk15-137</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>bouncycastle</groupId>
+            <artifactId>bcprov-jdk15</artifactId>
+            <version>140</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>bliki-3.0.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>bsf-2.4.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>bsf</groupId>
+            <artifactId>bsf</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>bsh-1.3.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>bsh</groupId>
+            <artifactId>bsh</artifactId>
+            <version>1.3.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>cglib-nodep-2.2_beta1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>chemistry-abdera-0.5-SNAPSHOT</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>chemistry-tck-atompub-0.5-SNAPSHOT</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>chiba-1.3.0-patched</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-beanutils-1.7.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.7.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-codec-1.3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.3</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-collections-3.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-dbcp-1.2.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-digester-1.6</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-digester</groupId>
+            <artifactId>commons-digester</artifactId>
+            <version>1.6</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-discovery-0.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-discovery</groupId>
+            <artifactId>commons-discovery</artifactId>
+            <version>0.2</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-el</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-el</groupId>
+            <artifactId>commons-el</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-fileupload-1.2.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-httpclient-3.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-io-1.4</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-jxpath-1.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-jxpath</groupId>
+            <artifactId>commons-jxpath</artifactId>
+            <version>1.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>xerces</groupId>
+                    <artifactId>xerces</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-lang-2.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-logging-1.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-modeler</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-modeler</groupId>
+            <artifactId>commons-modeler</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-pool-1.4</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-pool</groupId>
+            <artifactId>commons-pool</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>cxf-2.2.2-patched</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>dom4j-1.6.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>ehcache-core-2.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-core</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>facebook_070716</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>FastInfoset-1.2.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>com.sun.xml.fastinfoset</groupId>
+            <artifactId>FastInfoset</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>fontbox-0.8.0-incubating</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>fop-0.94</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>fop</artifactId>
+            <version>0.94</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>freemarker-2.3.13</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.13</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>geronimo-activation_1.0.2_spec-1.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>geronimo-activation_1.1_spec-1.0.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>geronimo-annotation_1.0_spec-1.1.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>geronimo-jaxws_2.1_spec-1.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>geronimo-stax-api_1.0_spec-1.0.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>geronimo-ws-metadata_2.0_spec-1.1.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>greenmail-1.3-patched</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>guessencoding-1.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.codehaus.guessencoding</groupId>
+            <artifactId>guessencoding</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>hibernate-3.2.6-patched</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>hrtlib</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>htmlparser-1.6</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.htmlparser</groupId>
+            <artifactId>htmlparser</artifactId>
+            <version>1.6</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>ibatis-2.3.4.726-patched</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>icu4j_3_6_1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>com.ibm.icu</groupId>
+            <artifactId>icu4j</artifactId>
+            <version>3.6.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jakarta-oro-2.0.8</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>apache-oro</groupId>
+            <artifactId>jakarta-oro</artifactId>
+            <version>2.0.8</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jaxb-api-2.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.xml.stream</groupId>
+                    <artifactId>stax-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jaxb-impl-2.1.7</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>2.1.7</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jaxb-xjc-2.1.7</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-xjc</artifactId>
+            <version>2.1.7</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jaxen-1.1-beta-8</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+            <version>1.1-beta-8</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>xom</groupId>
+                    <artifactId>xom</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>xerces</groupId>
+                    <artifactId>xmlParserAPIs</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>xom</groupId>
+                    <artifactId>xom</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jaxrpc</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jaxws-api-2.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>javax.xml</groupId>
+            <artifactId>jaxws-api</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jbpm-identity-3.3.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.jbpm.jbpm3</groupId>
+            <artifactId>jbpm-identity</artifactId>
+            <version>3.3.1.GA</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jbpm-jpdl-3.3.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.jbpm.jbpm3</groupId>
+            <artifactId>jbpm-jpdl</artifactId>
+            <version>3.3.1.GA</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.jackrabbit</groupId>
+                    <artifactId>jackrabbit-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.hibernate</groupId>
+                    <artifactId>hibernate</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jcr-1.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>javax.jcr</groupId>
+            <artifactId>jcr</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jgroups-2.8.0-b2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jibx-bind</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jibx-run</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jid3lib-0.5.4</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>net.sf.javamusictag</groupId>
+            <artifactId>jid3lib</artifactId>
+            <version>0.5.4</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>JMagick</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>joda-time-1.2.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jooconverter-2.1.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>json</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jsr107cache-1.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jstl-1.1.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jta</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jtds-1.2.5</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jug-asl-2.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!-- NONEED
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>junit-4.6</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jutf7-1.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>jut</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>log4j-1.2.15</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.14</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>lucene-analyzers-2.4.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>lucene-core-2.4.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>lucene-regex-2.4.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-regex</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>lucene-snowball-2.4.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-snowball</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>mail</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+
+        <!--NONEED
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>mockito-all-1.8.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>myfaces-api-1.1.5</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.myfaces.core</groupId>
+            <artifactId>myfaces-api</artifactId>
+            <version>1.1.5</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>myfaces-impl-1.1.5</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.myfaces.core</groupId>
+            <artifactId>myfaces-impl</artifactId>
+            <version>1.1.5</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>neethi-2.0.4</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.neethi</groupId>
+            <artifactId>neethi</artifactId>
+            <version>2.0.4</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.codehaus.woodstox</groupId>
+                    <artifactId>wstx-asl</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>odmg-3.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>odmg</groupId>
+            <artifactId>odmg</artifactId>
+            <version>3.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>opencmis-test-browser-0.1-SNAPSHOT</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>openoffice-juh-3.1.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.openoffice</groupId>
+            <artifactId>juh</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>openoffice-jurt-3.1.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.openoffice</groupId>
+            <artifactId>jurt</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>openoffice-ridl-3.1.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.openoffice</groupId>
+            <artifactId>ridl</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>openoffice-sandbox-2.0.3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>openoffice-unoil-3.1.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.openoffice</groupId>
+            <artifactId>unoil</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>opensaml-1.0.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.opensaml</groupId>
+            <artifactId>opensaml</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>org.springframework.aop-3.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>org.springframework.asm-3.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-asm</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>org.springframework.beans-3.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>org.springframework.context-3.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>org.springframework.context.support-3.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>org.springframework.core-3.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>org.springframework.expression-3.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>org.springframework.jdbc-3.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>org.springframework.orm-3.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>org.springframework.transaction-3.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>org.springframework.web-3.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>org.springframework.webmvc-3.0.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>pdfbox-0.8.0-incubating-12-Nov-09</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>PDFRenderer-2009-09-27</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>poi-3.7-SNAPSHOT-20100204</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>poi-ooxml-3.7-SNAPSHOT-20100204</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>poi-ooxml-schemas-3.7-SNAPSHOT-20100204</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>poi-scratchpad-3.7-SNAPSHOT-20100204</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--NONEED
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>postgresql-8.4-701.jdbc3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>quartz-1.6.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.opensymphony.quartz</groupId>
+            <artifactId>quartz</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>resolver</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>xml-resolver</groupId>
+            <artifactId>xml-resolver</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>rhino-js-1.6R7</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>rhino</groupId>
+            <artifactId>js</artifactId>
+            <version>1.6R7</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>saaj-api-1.3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>javax.xml.soap</groupId>
+            <artifactId>saaj-api</artifactId>
+            <version>1.3</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>saaj-impl-1.3</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>com.sun.xml.messaging.saaj</groupId>
+            <artifactId>saaj-impl</artifactId>
+            <version>1.3</version>
+        </dependency>
+
+
+        <!-- NONEED
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>saaj</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>saxpath</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>saxpath</groupId>
+            <artifactId>saxpath</artifactId>
+            <version>1.0-FCS</version>
+        </dependency>
+
+
+        <!--NONEED
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>shale-test-1.0.4</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>slf4j-api-1.5.11</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.5.11</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>slf4j-log4j12-1.5.11</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.5.11</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>springmodules-jbpm31</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>spring-surf-1.0.0.CI-SNAPSHOT</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework.extensions.surf</groupId>
+            <artifactId>spring-surf</artifactId>
+            <version>1.0.0.CI-SNAPSHOT</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>spring-surf-api-1.0.0.CI-SNAPSHOT</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework.extensions.surf</groupId>
+            <artifactId>spring-surf-api</artifactId>
+            <version>1.0.0.CI-SNAPSHOT</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>spring-surf-core-1.0.0.CI-SNAPSHOT</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework.extensions.surf</groupId>
+            <artifactId>spring-surf-core</artifactId>
+            <version>1.0.0.CI-SNAPSHOT</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>spring-surf-core-configservice-1.0.0.CI-SNAPSHOT</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework.extensions.surf</groupId>
+            <artifactId>spring-surf-core-configservice</artifactId>
+            <version>1.0.0.CI-SNAPSHOT</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>spring-webscripts-1.0.0.CI-SNAPSHOT</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework.extensions.surf</groupId>
+            <artifactId>spring-webscripts</artifactId>
+            <version>1.0.0.CI-SNAPSHOT</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>spring-webscripts-api-1.0.0.CI-SNAPSHOT</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework.extensions.surf</groupId>
+            <artifactId>spring-webscripts-api</artifactId>
+            <version>1.0.0.CI-SNAPSHOT</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>standard</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>stax-api-1.0.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>stax</groupId>
+            <artifactId>stax-api</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>stax-utils-20060502</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>net.java.dev.stax-utils</groupId>
+            <artifactId>stax-utils</artifactId>
+            <version>20060502</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.bea.xml</groupId>
+                    <artifactId>jsr173-ri</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>stringtemplate-3.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>stringtemplate</artifactId>
+            <version>3.2</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>subetha-smtp</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.subethamail</groupId>
+            <artifactId>subethasmtp</artifactId>
+            <version>3.1.4</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>tika-core-0.6</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-core</artifactId>
+            <version>0.6</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>tika-parsers-0.6-patched</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>tm-extractors-1.0-patched</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>truezip</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>urlrewritefilter-3.1.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.tuckey</groupId>
+            <artifactId>urlrewritefilter</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>wsdl4j-1.6.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>wsdl4j</groupId>
+            <artifactId>wsdl4j</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>wss4j</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>wss4j</groupId>
+            <artifactId>wss4j</artifactId>
+            <version>1.5.1</version>
+        </dependency>
+
+
+        <!--NONEED
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>wstx-asl-3.2.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>wstx-asl-3.2.4</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.codehaus.woodstox</groupId>
+            <artifactId>wstx-asl</artifactId>
+            <version>3.2.6</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>xercesImpl-2.8.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>xmlbeans-2.3.0</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.xmlbeans</groupId>
+            <artifactId>xmlbeans</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>xmlgraphics-commons-1.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>xmlgraphics-commons</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>xml-resolver-1.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>xml-resolver</groupId>
+            <artifactId>xml-resolver</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>xmlrpc</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>XmlSchema-1.4.5</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.ws.commons.schema</groupId>
+            <artifactId>XmlSchema</artifactId>
+            <version>1.4.5</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>xmlsec-1.4.1</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.apache.santuario</groupId>
+            <artifactId>xmlsec</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>xpp3-1.1.3_8</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>xpp3</groupId>
+            <artifactId>xpp3</artifactId>
+            <version>1.1.3.4.O</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.alfresco.sdk</groupId>
+            <artifactId>xstream-1.2.2</artifactId>
+            <version>3.3</version>
+            <classifier>community</classifier>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.2.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>xpp3</groupId>
+                    <artifactId>xpp3_min</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+    </dependencies>
+
+</project>
